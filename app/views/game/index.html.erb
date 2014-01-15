@@ -1,0 +1,10 @@
+<h1>Guessing Game</h1>
+<p>I'm thinking of a number between 1 and 20. Can you guess what it is?</p>
+<%= form_for :game, url: guess_path do |f| %>
+    <%= f.text_field :guess %>
+    <%= f.submit %>
+<% end %>
+<% if session[:current_game].guessed? %>
+    <h2>The number is <%= session[:current_game].guess %>. You Guessed it!</h2>
+<% end %>
+
