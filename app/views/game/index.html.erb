@@ -14,8 +14,9 @@
           <%= link_to 'Reset', game_new_path , class: 'btn btn-default'%>
         </div>
         <div>
-          <% session[:current_game].no_of_tries.times do %>
-            <i class="glyphicon glyphicon-remove"></i>
+          Life Remaining:
+          <% session[:current_game].life_remaining.times do %>
+             <i class="glyphicon glyphicon-heart"></i>
           <% end %>
         </div>
     <% end %>

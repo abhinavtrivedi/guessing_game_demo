@@ -12,11 +12,15 @@ class Game
   end
 
   def lost?
-    @no_of_tries >= 5 && @guess.to_i != @secret
+    life_remaining == 0 && @guess.to_i != @secret
   end
 
   def is_guess_valid?(number)
     number.is_a? (Integer) && number.to_i >= 1 && number.to_i <= 20
+  end
+
+  def life_remaining
+    5 - @no_of_tries
   end
 
 end
