@@ -10,7 +10,10 @@ gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:test]
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
+
+# Use pg for production
+gem 'pg', group: [:production]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
