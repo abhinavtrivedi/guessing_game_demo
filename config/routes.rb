@@ -3,6 +3,7 @@ GuessingGameApp::Application.routes.draw do
   get "game/index"
   get "game/new"
   post "game/guess" => 'game#guess', as: :guess
+  get '/game', to: 'game#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
