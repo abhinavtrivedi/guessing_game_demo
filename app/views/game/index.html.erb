@@ -9,7 +9,7 @@
 <% else %>
     <%= form_for :game, url: guess_path, html: {class: 'form-inline', role: 'form'} do |f| %>
         <div class="form-group">
-          <%= f.text_field :guess, class: 'form-control', min: 1, max: 20 %>
+          <%= f.text_field :guess, class: 'form-control', min: 1, max: 20, autofocus: 'autofocus' %>
           <%= f.submit 'Submit', class: 'btn btn-default' %>
           <%= link_to 'Reset', game_new_path , class: 'btn btn-default'%>
         </div>
